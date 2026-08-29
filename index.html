@@ -1,0 +1,135 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A1.1 Fragen und Antworten</title><style>
+:root{--blue:#183f72;--du:#eaf2fb;--sie:#f4eaf7;--ink:#1d2733;--muted:#667085;--line:#d8dee8}*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;margin:0;background:#f5f7fa;color:var(--ink)}main{max-width:1180px;margin:28px auto;padding:0 18px 40px}.hero{background:linear-gradient(135deg,#173f73,#245a96);color:white;border-radius:16px;padding:24px 28px;margin-bottom:18px}.hero h1{margin:0 0 7px;font-size:25px}.hero p{margin:0;opacity:.9}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:white;border:1px solid var(--line);padding:12px 14px;border-radius:12px;margin-bottom:16px}.controls button,.speak{border:1px solid #c7d2e3;background:white;border-radius:9px;padding:8px 11px;cursor:pointer;font-size:15px}.controls button:hover,.speak:hover{background:#eef4fb}.rate{font-size:14px;color:var(--muted)}.grid{display:grid;grid-template-columns:135px 130px 1fr 1fr;gap:0;background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.cell{padding:13px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:74px}.head{background:var(--blue);color:white;font-weight:700;min-height:auto}.du{background:var(--du)}.sie{background:var(--sie)}.topic{font-weight:800;color:#244b79}.verb{font-weight:700;color:#5a6472}.de{font-size:17px;font-weight:650;line-height:1.35}.pt{font-size:13px;color:var(--muted);margin-top:4px}.line{display:flex;align-items:flex-start;gap:8px;margin:2px 0 8px}.line:last-child{margin-bottom:0}.speak{padding:4px 8px;line-height:1.1;flex:0 0 auto}.legend{margin-top:18px;background:white;border:1px solid var(--line);border-radius:14px;padding:16px 18px}.legend h2{font-size:17px;margin:0 0 8px;color:#244b79}.legend p{margin:5px 0;line-height:1.5}.tip{font-size:13px;color:var(--muted)}
+
+.verb-section{margin-top:18px;background:white;border:1px solid var(--line);border-radius:14px;padding:18px}
+.verb-section h2{margin:0 0 6px;color:#244b79;font-size:20px}
+.verb-section .intro{margin:0 0 14px;color:var(--muted);font-size:14px}
+.verb-table{width:100%;border-collapse:collapse;font-size:14px}
+.verb-table th{background:#183f72;color:white;text-align:left;padding:10px;border:1px solid #d8dee8}
+.verb-table td{padding:9px 10px;border:1px solid #d8dee8;vertical-align:middle}
+.verb-table .inf{font-weight:800;color:#244b79;font-size:16px}
+.verb-table .ending{font-weight:850;color:#b04444}
+.verb-table .irregular{font-weight:850;color:#7a3ea1}
+.verb-audio{white-space:nowrap}
+@media(max-width:700px){.verb-table{font-size:12px}.verb-table th,.verb-table td{padding:7px 6px}}
+.family-section{margin-top:18px;background:white;border:1px solid var(--line);border-radius:14px;padding:18px}
+.family-section h2{margin:0 0 6px;color:#244b79;font-size:20px}
+.family-section .intro{margin:0 0 14px;color:var(--muted);font-size:14px}
+.family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.family-card{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff}
+.family-card .top{display:flex;align-items:flex-start;gap:8px}
+.family-card .deword{font-size:17px;font-weight:750;line-height:1.25}
+.family-card .plural{font-size:13px;color:#526070;margin-top:3px}
+.family-card .meaning{font-size:14px;color:var(--muted);margin-top:6px}
+.family-card .note{font-size:12px;color:#7b8492;margin-top:5px}
+@media(max-width:900px){.family-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.family-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.head{display:none}.cell{border-right:0}.topic{min-height:auto;background:#173f73;color:white}.verb{min-height:auto}.du,.sie{border-left:5px solid transparent}.du{border-left-color:#6e9ed3}.sie{border-left-color:#b27ac1}}
+</style></head><body><main><section class="hero"><h1>FRAGEN UND ANTWORTEN — A1.1</h1><p>Treino diário interativo • clique em 🔊 sem sair da página</p></section><div class="controls"><button onclick="setRate(0.72)">🐢 Devagar</button><button onclick="setRate(0.92)">▶ Normal</button><button onclick="speechSynthesis.cancel()">■ Parar</button><span class="rate" id="rate">Velocidade: normal</span></div><div class="grid" id="grid"><div class="cell head">TEMA</div><div class="cell head">VERBO</div><div class="cell head">INFORMAL — du</div><div class="cell head">FORMAL — Sie</div></div>
+
+<section class="verb-section">
+  <h2>WICHTIGE VERBEN — Verbos principais A1.1</h2>
+  <p class="intro">Presente (Präsens). A terminação destacada ajuda a visualizar a conjugação. Clique em 🔊 para ouvir o infinitivo.</p>
+  <div style="overflow-x:auto">
+    <table class="verb-table">
+      <thead><tr><th>🔊</th><th>Verbo</th><th>Português</th><th>ich</th><th>du</th><th>er / sie / es</th><th>wir</th><th>ihr</th><th>Sie / sie</th></tr></thead>
+      <tbody id="verbBody"></tbody>
+    </table>
+  </div>
+</section>
+<section class="family-section">
+  <h2>FAMILIE — Wortschatz</h2>
+  <p class="intro">Vocabulário básico da família. Clique em 🔊 para ouvir a pronúncia em alemão.</p>
+  <div class="family-grid" id="familyGrid"></div>
+</section>
+<section class="legend"><h2>Memória visual — conjugação</h2><p><b>Infinitivo → -en</b> &nbsp; | &nbsp; <b>ich → -e</b> &nbsp; | &nbsp; <b>du → -st</b> &nbsp; | &nbsp; <b>Sie → -en</b></p><p><b>sein:</b> ich bin • du bist • Sie sind &nbsp; | &nbsp; <b>haben:</b> ich habe • du hast • Sie haben &nbsp; | &nbsp; <b>heißen:</b> ich heiße • du heißt • Sie heißen</p><p class="tip">O áudio usa a voz alemã instalada no macOS/ navegador. Se houver mais de uma voz alemã, o sistema prioriza de-DE.</p></section></main><script>
+let rate=.92;function setRate(v){rate=v;document.getElementById('rate').textContent='Velocidade: '+(v<.8?'devagar':'normal')}function speak(t){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=rate;const vs=speechSynthesis.getVoices();const de=vs.find(v=>v.lang==='de-DE')||vs.find(v=>v.lang&&v.lang.startsWith('de'));if(de)u.voice=de;speechSynthesis.speak(u)}
+const rows=[
+['NAME','heißen','Wie heißt du?','Como você se chama?',['Ich heiße Marcelo.'],'Wie heißen Sie?','Como o(a) senhor(a) se chama?',['Ich heiße Marcelo Martins.']],
+['HERKUNFT','kommen','Woher kommst du?','De onde você vem?',['Ich komme aus Brasilien.'],'Woher kommen Sie?','De onde o(a) senhor(a) vem?',['Ich komme aus Brasilien.']],
+['WOHNORT','wohnen','Wo wohnst du?','Onde você mora?',['Ich wohne in São Paulo.'],'Wo wohnen Sie?','Onde o(a) senhor(a) mora?',['Ich wohne in São Paulo.']],
+['BERUF','machen / sein','Was machst du beruflich?','Qual é sua profissão?',['Ich bin Ingenieur.'],'Was machen Sie beruflich?','Qual é a sua profissão?',['Ich bin Ingenieur.']],
+['FAMILIENSTAND','sein','Bist du verheiratet?','Você é casado?',['Ja, ich bin verheiratet.','Ich bin ledig.','Ich bin geschieden.','Ich bin verwitwet.'],'Sind Sie verheiratet?','O(a) senhor(a) é casado(a)?',['Ja, ich bin verheiratet.','Ich bin ledig.','Ich bin geschieden.','Ich bin verwitwet.']],
+['ALTER','sein','Wie alt bist du?','Quantos anos você tem?',['Ich bin 49 Jahre alt.','neunundvierzig'],'Wie alt sind Sie?','Quantos anos o(a) senhor(a) tem?',['Ich bin 49 Jahre alt.','neunundvierzig']],
+['KINDER','haben','Hast du Kinder?','Você tem filhos?',['Ja, ich habe ein Kind.','Ja, ich habe zwei Kinder.','Ja, ich habe drei Kinder.','Nein, ich habe keine Kinder.'],'Haben Sie Kinder?','O(a) senhor(a) tem filhos?',['Ja, ich habe ein Kind.','Ja, ich habe zwei Kinder.','Ja, ich habe drei Kinder.','Nein, ich habe keine Kinder.']],
+['TELEFONNUMMER','sein','Wie ist deine Telefonnummer?','Qual é o seu telefone?',['Meine Telefonnummer ist …'],'Wie ist Ihre Telefonnummer?','Qual é o seu telefone?',['Meine Telefonnummer ist …']]
+];
+function block(q,pt,ans,cls){let h=`<div class="cell ${cls}"><div class="line"><button class="speak" onclick='speak(${JSON.stringify(q)})'>🔊</button><div><div class="de">${q}</div><div class="pt">${pt}</div></div></div>`;for(const a of ans)h+=`<div class="line"><button class="speak" onclick='speak(${JSON.stringify(a)})'>🔊</button><div class="de">${a}</div></div>`;return h+'</div>'}const g=document.getElementById('grid');for(const r of rows){g.insertAdjacentHTML('beforeend',`<div class="cell topic">${r[0]}</div><div class="cell verb">${r[1]}</div>${block(r[2],r[3],r[4],'du')}${block(r[5],r[6],r[7],'sie')}`)}
+
+
+const mainVerbs=[
+['sein','ser / estar','bin','bist','ist','sind','seid','sind',true],
+['haben','ter','habe','hast','hat','haben','habt','haben',true],
+['heißen','chamar-se','heiße','heißt','heißt','heißen','heißt','heißen',false],
+['kommen','vir','komme','kommst','kommt','kommen','kommt','kommen',false],
+['wohnen','morar','wohne','wohnst','wohnt','wohnen','wohnt','wohnen',false],
+['machen','fazer','mache','machst','macht','machen','macht','machen',false],
+['lernen','aprender / estudar','lerne','lernst','lernt','lernen','lernt','lernen',false],
+['arbeiten','trabalhar','arbeite','arbeitest','arbeitet','arbeiten','arbeitet','arbeiten',false],
+['sprechen','falar','spreche','sprichst','spricht','sprechen','sprecht','sprechen',true],
+['gehen','ir / andar','gehe','gehst','geht','gehen','geht','gehen',false],
+['fahren','ir / viajar (veículo)','fahre','fährst','fährt','fahren','fahrt','fahren',true],
+['essen','comer','esse','isst','isst','essen','esst','essen',true],
+['trinken','beber','trinke','trinkst','trinkt','trinken','trinkt','trinken',false],
+['lesen','ler','lese','liest','liest','lesen','lest','lesen',true],
+['schreiben','escrever','schreibe','schreibst','schreibt','schreiben','schreibt','schreiben',false]
+];
+
+function markForm(inf, form, irregular){
+  if(irregular) return `<span class="irregular">${form}</span>`;
+  let stem=inf.endsWith('en')?inf.slice(0,-2):(inf.endsWith('n')?inf.slice(0,-1):inf);
+  if(form.startsWith(stem)){
+    return stem+`<span class="ending">${form.slice(stem.length)}</span>`;
+  }
+  return form;
+}
+const vb=document.getElementById('verbBody');
+for(const v of mainVerbs){
+  const [inf,pt,ich,du,ersie,wir,ihr,sie,irr]=v;
+  vb.insertAdjacentHTML('beforeend',`<tr>
+    <td class="verb-audio"><button class="speak" onclick='speak(${JSON.stringify(inf)})'>🔊</button></td>
+    <td class="inf">${inf}</td><td>${pt}</td>
+    <td>${markForm(inf,ich,irr)}</td><td>${markForm(inf,du,irr)}</td><td>${markForm(inf,ersie,irr)}</td>
+    <td>${markForm(inf,wir,irr)}</td><td>${markForm(inf,ihr,irr)}</td><td>${markForm(inf,sie,irr)}</td>
+  </tr>`);
+}
+
+const familyWords=[
+['der Vater','die Väter','pai',''],
+['die Mutter','die Mütter','mãe',''],
+['die Eltern','—','pais','Usado no plural.'],
+['das Kind','die Kinder','filho / criança','Neutro: pode significar filho ou filha.'],
+['der Sohn','die Söhne','filho',''],
+['die Tochter','die Töchter','filha',''],
+['die Großmutter','die Großmütter','avó','Forma comum no dia a dia: die Oma.'],
+['der Großvater','die Großväter','avô','Forma comum no dia a dia: der Opa.'],
+['die Oma','die Omas','vó / avó','Forma familiar e muito usada.'],
+['der Opa','die Opas','vô / avô','Forma familiar e muito usada.'],
+['der Onkel','die Onkel','tio',''],
+['die Tante','die Tanten','tia',''],
+['der Mann','die Männer','homem','Também pode significar marido pelo contexto.'],
+['die Frau','die Frauen','mulher','Também pode significar esposa pelo contexto.'],
+['der Ehemann','die Ehemänner','esposo / marido','Forma explícita para “marido”.'],
+['die Ehefrau','die Ehefrauen','esposa','Forma explícita para “esposa”.']
+];
+
+function familyCard(item){
+  const [word,plural,meaning,note]=item;
+  const audioText = word.replace(/^(der|die|das)\s/,'');
+  return `<div class="family-card">
+    <div class="top">
+      <button class="speak" onclick='speak(${JSON.stringify(audioText)})'>🔊</button>
+      <div>
+        <div class="deword">${word}</div>
+        <div class="plural">Plural: ${plural}</div>
+        <div class="meaning">${meaning}</div>
+        ${note?`<div class="note">${note}</div>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+
+const fg=document.getElementById('familyGrid');
+for(const item of familyWords){fg.insertAdjacentHTML('beforeend',familyCard(item));}
+
+</script></body></html>
