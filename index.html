@@ -35,9 +35,9 @@ section.card{margin-top:16px;background:var(--card);border:1px solid var(--line)
 </style>
 </head>
 <body><main>
-<section class="hero"><h1>ALEMÃO A1.1 — LIÇÕES 1 A 4 + TREINO PARA A PROVA</h1><p>Apresentação pessoal • W-Fragen • conjugação • números • família • estado civil • profissão • móveis • preços • teuer/billig • Ja/Nein/Doch</p><span class="badge">Atualizado até a Lição 4 — foco na prova oral e nos seus pontos fracos reais</span></section>
+<section class="hero"><h1>ALEMÃO A1.1 — LIÇÕES 1 A 4 + TREINO PARA A PROVA</h1><p>Apresentação pessoal • W-Fragen • conjugação • números • família • estado civil • profissão • artigos • objetos • móveis • preços • teuer/billig • Ja/Nein/Doch</p><span class="badge">Atualizado até a Lição 4 — foco na prova oral e nos seus pontos fracos reais</span></section>
 <div class="controls"><button onclick="setRate(.72)">🐢 Devagar</button><button onclick="setRate(.92)">▶ Normal</button><button onclick="speechSynthesis.cancel()">■ Parar</button><span class="rate" id="rate">Velocidade: normal</span></div>
-<div class="nav"><a href="#prova">Prova oral</a><a href="#wfragen">W-Fragen</a><a href="#conjugacao">Conjugação</a><a href="#verbos-chave">Verbos-chave</a><a href="#negacao">Negação</a><a href="#qa">Perguntas</a><a href="#familia">Família</a><a href="#estado-civil">Estado civil</a><a href="#numeros">Números</a><a href="#moveis">Móveis</a><a href="#precos">Preços</a></div>
+<div class="nav"><a href="#prova">Prova oral</a><a href="#wfragen">W-Fragen</a><a href="#conjugacao">Conjugação</a><a href="#verbos-chave">Verbos-chave</a><a href="#negacao">Negação</a><a href="#qa">Perguntas</a><a href="#familia">Família</a><a href="#estado-civil">Estado civil</a><a href="#numeros">Números</a><a href="#moveis">Artigos + Objetos</a><a href="#precos">Preços</a></div>
 
 <section class="card" id="prova">
 <h2>1. PROVA ORAL — Sich vorstellen</h2><p class="intro">Objetivo: primeiro falar sua apresentação inteira sem ler; depois responder às mesmas informações quando a professora perguntar fora de ordem.</p>
@@ -163,19 +163,55 @@ section.card{margin-top:16px;background:var(--card);border:1px solid var(--line)
 </section>
 
 <section class="card" id="moveis">
-<span class="lesson-tag">Lição 4</span>
-<h2>11. MÖBEL UND HAUS — MÓVEIS E CASA</h2>
-<p class="intro">Vocabulário-base para reconhecer artigo, objeto e plural.</p>
+<span class="lesson-tag">Lição 4 — vocabulário consolidado</span>
+<h2>11. ARTIGOS + OBJETOS + MÖBEL UND HAUS</h2>
+<p class="intro">Primeiro reconheça o gênero da palavra. Depois conecte o artigo definido, o indefinido e o negativo.</p>
+
+<div class="sub">Artigos — regra-base</div>
+<div class="rule-grid">
+  <div class="rule good"><h3>Masculino</h3><div class="formula">DER → EIN → KEIN</div><div class="example"><b>der Tisch</b><br>Das ist <b>ein Tisch</b>.<br>Das ist <b>kein Tisch</b>.</div></div>
+  <div class="rule good"><h3>Feminino</h3><div class="formula">DIE → EINE → KEINE</div><div class="example"><b>die Lampe</b><br>Das ist <b>eine Lampe</b>.<br>Das ist <b>keine Lampe</b>.</div></div>
+  <div class="rule good"><h3>Neutro</h3><div class="formula">DAS → EIN → KEIN</div><div class="example"><b>das Buch</b><br>Das ist <b>ein Buch</b>.<br>Das ist <b>kein Buch</b>.</div></div>
+</div>
+<div class="note"><b>Plural:</b> o artigo definido é <b>die</b>. Não existe artigo indefinido plural equivalente a “uns/umas” neste padrão. Para negar, use <b>keine</b>: <b>die Tische → keine Tische</b>.</div>
+<div class="note"><b>Atenção:</b> mais adiante aparece o acusativo masculino: <b>ein Sohn → einen Sohn</b> e <b>kein Sohn → keinen Sohn</b>. Por enquanto, memorize essa diferença como uma exceção importante do bloco com <b>haben</b>.</div>
+
+<div class="sub">Vocabulário consolidado — Objetos + Möbel und Haus</div>
 <div class="furniture-grid">
+  <div class="furniture-card"><button class="speak" onclick="speak('der Bleistift, die Bleistifte')">🔊</button><div class="big">der Bleistift</div><div class="small">lápis • Pl.: die Bleistifte</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Kugelschreiber, der Kuli, die Kugelschreiber')">🔊</button><div class="big">der Kugelschreiber / Kuli</div><div class="small">caneta • Pl.: die Kugelschreiber</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Schlüssel, die Schlüssel')">🔊</button><div class="big">der Schlüssel</div><div class="small">chave • Pl.: die Schlüssel</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Stift, die Stifte')">🔊</button><div class="big">der Stift</div><div class="small">caneta / instrumento de escrita • Pl.: die Stifte</div></div>
   <div class="furniture-card"><button class="speak" onclick="speak('der Tisch, die Tische')">🔊</button><div class="big">der Tisch</div><div class="small">mesa • Pl.: die Tische</div></div>
   <div class="furniture-card"><button class="speak" onclick="speak('der Stuhl, die Stühle')">🔊</button><div class="big">der Stuhl</div><div class="small">cadeira • Pl.: die Stühle</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Schrank, die Schränke')">🔊</button><div class="big">der Schrank</div><div class="small">armário • Pl.: die Schränke</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Sessel, die Sessel')">🔊</button><div class="big">der Sessel</div><div class="small">poltrona • Pl.: die Sessel</div></div>
+
+  <div class="furniture-card"><button class="speak" onclick="speak('die Brille, die Brillen')">🔊</button><div class="big">die Brille</div><div class="small">óculos • Pl.: die Brillen</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Kamera, die Kameras')">🔊</button><div class="big">die Kamera</div><div class="small">câmera • Pl.: die Kameras</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Flasche, die Flaschen')">🔊</button><div class="big">die Flasche</div><div class="small">garrafa • Pl.: die Flaschen</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Kette, die Ketten')">🔊</button><div class="big">die Kette</div><div class="small">colar / corrente • Pl.: die Ketten</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Tasche, die Taschen')">🔊</button><div class="big">die Tasche</div><div class="small">bolsa • Pl.: die Taschen</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Uhr, die Uhren')">🔊</button><div class="big">die Uhr</div><div class="small">relógio • Pl.: die Uhren</div></div>
   <div class="furniture-card"><button class="speak" onclick="speak('die Lampe, die Lampen')">🔊</button><div class="big">die Lampe</div><div class="small">luminária • Pl.: die Lampen</div></div>
+
+  <div class="furniture-card"><button class="speak" onclick="speak('das Buch, die Bücher')">🔊</button><div class="big">das Buch</div><div class="small">livro • Pl.: die Bücher</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('das Handy, die Handys')">🔊</button><div class="big">das Handy</div><div class="small">celular • Pl.: die Handys</div></div>
   <div class="furniture-card"><button class="speak" onclick="speak('das Bett, die Betten')">🔊</button><div class="big">das Bett</div><div class="small">cama • Pl.: die Betten</div></div>
   <div class="furniture-card"><button class="speak" onclick="speak('das Sofa, die Sofas')">🔊</button><div class="big">das Sofa</div><div class="small">sofá • Pl.: die Sofas</div></div>
-  <div class="furniture-card"><button class="speak" onclick="speak('der Schrank, die Schränke')">🔊</button><div class="big">der Schrank</div><div class="small">armário • Pl.: die Schränke</div></div>
   <div class="furniture-card"><button class="speak" onclick="speak('das Regal, die Regale')">🔊</button><div class="big">das Regal</div><div class="small">estante • Pl.: die Regale</div></div>
-  <div class="furniture-card"><button class="speak" onclick="speak('der Sessel, die Sessel')">🔊</button><div class="big">der Sessel</div><div class="small">poltrona • Pl.: die Sessel</div></div>
 </div>
+
+<div class="sub">Treino com os artigos</div>
+<div class="qa-list">
+  <div class="qa"><div class="q">Ist das ein Tisch?</div><div class="a">Ja, das ist ein Tisch.</div><div class="labels">der → ein</div></div>
+  <div class="qa"><div class="q">Ist das eine Lampe?</div><div class="a">Ja, das ist eine Lampe.</div><div class="labels">die → eine</div></div>
+  <div class="qa"><div class="q">Ist das ein Buch?</div><div class="a">Ja, das ist ein Buch.</div><div class="labels">das → ein</div></div>
+  <div class="qa"><div class="q">Ist das ein Tisch?</div><div class="a">Nein, das ist kein Tisch.</div><div class="labels">der → kein</div></div>
+  <div class="qa"><div class="q">Ist das eine Lampe?</div><div class="a">Nein, das ist keine Lampe.</div><div class="labels">die → keine</div></div>
+  <div class="qa"><div class="q">Sind das Tische?</div><div class="a">Nein, das sind keine Tische.</div><div class="labels">Plural → keine</div></div>
+</div>
+
 <div class="sub">Adjetivos úteis</div>
 <div class="adj-grid">
   <div class="adj-card"><button class="speak" onclick="speak('teuer')">🔊</button><div class="big">teuer</div><div class="small">caro</div></div>
