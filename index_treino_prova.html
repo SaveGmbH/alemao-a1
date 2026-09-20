@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alemão A1.1 — Lições 1 a 4 + Treino para Prova</title>
+<style>
+:root{--blue:#183f72;--blue2:#245a96;--du:#eaf2fb;--sie:#f4eaf7;--green:#eef7ea;--yellow:#fff8df;--red:#fff0f0;--ink:#1d2733;--muted:#667085;--line:#d8dee8;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;margin:0;background:#f5f7fa;color:var(--ink)}
+main{max-width:1180px;margin:28px auto;padding:0 18px 44px}.hero{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;border-radius:18px;padding:26px 28px;margin-bottom:16px}.hero h1{margin:0 0 8px;font-size:27px}.hero p{margin:0;opacity:.92;line-height:1.5}.badge{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.16);font-size:13px;font-weight:700}
+.controls,.nav{display:flex;gap:9px;align-items:center;flex-wrap:wrap;background:white;border:1px solid var(--line);padding:11px 13px;border-radius:12px;margin-bottom:14px}.controls button,.speak,.action{border:1px solid #c7d2e3;background:white;border-radius:9px;padding:8px 11px;cursor:pointer;font-size:14px}.controls button:hover,.speak:hover,.action:hover{background:#eef4fb}.rate{font-size:13px;color:var(--muted)}.nav a{font-size:13px;font-weight:700;color:#244b79;text-decoration:none;padding:6px 8px;border-radius:7px}.nav a:hover{background:#eef4fb}
+section.card{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.card h2{margin:0 0 6px;color:#244b79;font-size:21px}.intro{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.45}.sub{font-size:15px;font-weight:800;color:#244b79;margin:16px 0 9px}
+.exam-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:12px}.script,.drillbox{border:1px solid var(--line);border-radius:12px;padding:14px}.script{background:#f7fbff}.drillbox{background:#fbfbfc}.script-line{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:1px dashed #dfe5ee}.script-line:last-child{border-bottom:0}.de{font-size:16px;font-weight:700;line-height:1.4}.pt{font-size:13px;color:var(--muted);margin-top:3px}.tiny{font-size:12px;color:var(--muted)}
+.qa-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}.qa{border:1px solid var(--line);border-radius:10px;padding:11px;background:#fff}.qa .q{font-weight:800;color:#244b79}.qa .a{margin-top:6px}.qa .labels{font-size:11px;color:var(--muted);margin-top:5px}
+.random-card{border:2px solid #cbd8e8;border-radius:13px;padding:14px;background:#f8fbff}.random-q{font-size:20px;font-weight:850;color:#183f72;margin:6px 0 10px}.random-a{margin-top:10px;padding:10px;border-radius:9px;background:#eef7ea;display:none}.random-buttons{display:flex;gap:8px;flex-wrap:wrap}
+.rule-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.rule{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff}.rule h3{font-size:16px;margin:0 0 7px;color:#244b79}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f2f5f8;border-radius:8px;padding:8px;font-weight:800;margin:7px 0}.example{font-size:14px;line-height:1.45}.good{background:var(--green)}.warn{background:var(--yellow)}.error{background:var(--red)}
+.wtable,.vtable{width:100%;border-collapse:collapse;font-size:14px}.wtable th,.vtable th{background:#183f72;color:white;text-align:left;padding:9px;border:1px solid var(--line)}.wtable td,.vtable td{padding:9px;border:1px solid var(--line);vertical-align:top}.focus{font-weight:850;color:#b04444}.irreg{font-weight:850;color:#7a3ea1}
+.weak-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.weak{border:1px solid var(--line);border-radius:11px;padding:12px}.weak h3{margin:0 0 8px;font-size:16px;color:#244b79}.weak ul{margin:7px 0 0 18px;padding:0}.weak li{margin:4px 0;font-size:14px}.x{color:#a13b3b;font-weight:800}.ok{color:#26723c;font-weight:800}
+.neg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.neg{border:1px solid var(--line);border-radius:11px;padding:12px}.neg h3{margin:0 0 8px;color:#244b79;font-size:16px}.pair{padding:7px 0;border-bottom:1px dashed #e1e5eb}.pair:last-child{border-bottom:0}.key{font-weight:850;color:#7a3ea1}
+.grid{display:grid;grid-template-columns:135px 130px 1fr 1fr;gap:0;background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.cell{padding:12px 13px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:70px}.head{background:var(--blue);color:white;font-weight:700;min-height:auto}.du{background:var(--du)}.sie{background:var(--sie)}.topic{font-weight:800;color:#244b79}.verb{font-weight:700;color:#5a6472}.line{display:flex;align-items:flex-start;gap:7px;margin:2px 0 7px}.line:last-child{margin-bottom:0}.speak{padding:4px 8px;line-height:1.1;flex:0 0 auto}
+.family-grid,.job-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.mini{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff}.mini .word{font-weight:800;color:#244b79}.mini .meaning{font-size:12px;color:var(--muted);margin-top:4px}.note{padding:10px 12px;border-left:4px solid #6d8fb8;background:#f5f8fc;border-radius:8px;font-size:14px;line-height:1.45;margin-top:10px}
+@media(max-width:900px){.exam-grid,.qa-list,.neg-grid{grid-template-columns:1fr}.rule-grid,.weak-grid,.family-grid,.job-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.head{display:none}.cell{border-right:0}.topic{min-height:auto;background:#173f73;color:white}.du,.sie{border-left:5px solid transparent}.du{border-left-color:#6e9ed3}.sie{border-left-color:#b27ac1}}
+@media(max-width:560px){.rule-grid,.weak-grid,.family-grid,.job-grid{grid-template-columns:1fr}.hero h1{font-size:23px}.random-q{font-size:18px}}
+
+.num-grid,.status-grid,.furniture-grid,.adj-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.num-card,.status-card,.furniture-card,.adj-card{border:1px solid var(--line);border-radius:10px;padding:11px;background:#fff}
+.num-card .big,.status-card .big,.furniture-card .big,.adj-card .big{font-weight:850;color:#244b79;font-size:16px}
+.num-card .small,.status-card .small,.furniture-card .small,.adj-card .small{font-size:12px;color:var(--muted);margin-top:4px}
+.price-box{border:1px solid var(--line);border-radius:12px;padding:13px;background:#f8fbff}
+.price-line{padding:8px 0;border-bottom:1px dashed #dfe5ee}.price-line:last-child{border-bottom:0}
+.lesson-tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef4fb;color:#244b79;font-size:12px;font-weight:800;margin-bottom:8px}
+@media(max-width:900px){.num-grid,.status-grid,.furniture-grid,.adj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.num-grid,.status-grid,.furniture-grid,.adj-grid{grid-template-columns:1fr}}
+
+
+.quiz-wrap{display:grid;grid-template-columns:220px 1fr;gap:14px}.quiz-menu{display:flex;flex-direction:column;gap:7px}.quiz-menu button{padding:10px;border:1px solid var(--line);background:#fff;border-radius:9px;text-align:left;cursor:pointer}.quiz-menu button.active{background:#eaf2fb;border-color:#6d93bf;font-weight:800}.quiz-panel{border:1px solid var(--line);border-radius:13px;padding:16px;background:#fbfcfe}.quiz-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}.quiz-question{font-size:21px;font-weight:850;color:#183f72;margin:15px 0}.quiz-options{display:grid;gap:8px}.quiz-option{padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;cursor:pointer;text-align:left;font-size:15px}.quiz-option.correct{background:#eaf7e8;border-color:#75a86a}.quiz-option.wrong{background:#fff0f0;border-color:#d98b8b}.quiz-input{width:100%;max-width:560px;padding:11px;border:1px solid #bfc9d8;border-radius:9px;font-size:16px}.quiz-feedback{margin-top:12px;padding:10px;border-radius:9px;display:none}.quiz-feedback.ok{display:block;background:#eaf7e8}.quiz-feedback.bad{display:block;background:#fff0f0}.scorebar{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.scorepill{background:#eef4fb;border-radius:999px;padding:6px 10px;font-weight:750;font-size:13px}.quiz-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.quiz-actions button{padding:9px 12px;border:1px solid #c7d2e3;background:#fff;border-radius:9px;cursor:pointer}.quiz-actions .primary{background:#183f72;color:#fff;border-color:#183f72}.quiz-tip{font-size:13px;color:var(--muted);margin-top:7px}@media(max-width:760px){.quiz-wrap{grid-template-columns:1fr}.quiz-menu{display:grid;grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body><main>
+<section class="hero"><h1>ALEMÃO A1.1 — LIÇÕES 1 A 4 + TREINO PARA A PROVA</h1><p>Apresentação pessoal • W-Fragen • conjugação • números • família • estado civil • profissão • artigos • objetos • móveis • preços • teuer/billig • Ja/Nein/Doch</p><span class="badge">Atualizado até a Lição 4 — foco na prova oral e nos seus pontos fracos reais</span></section>
+<div class="controls"><button onclick="setRate(.72)">🐢 Devagar</button><button onclick="setRate(.92)">▶ Normal</button><button onclick="speechSynthesis.cancel()">■ Parar</button><span class="rate" id="rate">Velocidade: normal</span></div>
+<div class="nav"><a href="#prova">Prova oral</a><a href="#wfragen">W-Fragen</a><a href="#conjugacao">Conjugação</a><a href="#verbos-chave">Verbos-chave</a><a href="#negacao">Negação</a><a href="#qa">Perguntas</a><a href="#familia">Família</a><a href="#estado-civil">Estado civil</a><a href="#numeros">Números</a><a href="#moveis">Artigos + Objetos</a><a href="#precos">Preços</a><a href="#treino-intensivo">Treino intensivo</a></div>
+
+<section class="card" id="prova">
+<h2>1. PROVA ORAL — Sich vorstellen</h2><p class="intro">Objetivo: primeiro falar sua apresentação inteira sem ler; depois responder às mesmas informações quando a professora perguntar fora de ordem.</p>
+<div class="exam-grid">
+<div class="script"><div class="sub" style="margin-top:0">Apresentação curta e segura</div>
+<div class="script-line"><button class="speak" onclick="speak('Guten Tag.')">🔊</button><div><div class="de">Guten Tag.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich heiße Marcelo Martins.')">🔊</button><div><div class="de">Ich heiße Marcelo Martins.</div><div class="pt">Eu me chamo Marcelo Martins.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich komme aus Brasilien.')">🔊</button><div><div class="de">Ich komme aus Brasilien.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich wohne in São Paulo.')">🔊</button><div><div class="de">Ich wohne in São Paulo.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich bin neunundvierzig Jahre alt.')">🔊</button><div><div class="de">Ich bin 49 Jahre alt.</div><div class="pt">49 = neunundvierzig</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich bin verheiratet.')">🔊</button><div><div class="de">Ich bin verheiratet.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich habe eine Tochter.')">🔊</button><div><div class="de">Ich habe eine Tochter.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich bin Unternehmer. Ich arbeite im Bereich Umwelttechnik.')">🔊</button><div><div class="de">Ich bin Unternehmer. Ich arbeite im Bereich Umwelttechnik.</div><div class="pt">Sou empresário. Trabalho na área de engenharia ambiental.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch.')">🔊</button><div><div class="de">Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch.</div></div></div>
+<div class="script-line"><button class="speak" onclick="speak('Meine Telefonnummer ist ...')">🔊</button><div><div class="de">Meine Telefonnummer ist ...</div><div class="pt">Complete apenas se a professora pedir.</div></div></div>
+</div>
+<div class="drillbox"><div class="sub" style="margin-top:0">Treino aleatório da professora</div><div class="random-card"><div class="tiny">Clique em “Nova pergunta”. Tente responder antes de revelar.</div><div class="random-q" id="randomQ">Bereit? — Pronto?</div><div class="random-buttons"><button class="action" onclick="newQuestion()">🎲 Nova pergunta</button><button class="action" onclick="speakCurrent()">🔊 Ouvir</button><button class="action" onclick="showAnswer()">👁 Mostrar resposta</button></div><div class="random-a" id="randomA"></div></div>
+<div class="note"><b>Ordem de treino:</b> 1) apresentação inteira; 2) perguntas formais com <b>Sie</b>; 3) perguntas fora de ordem; 4) só depois misturar <b>du</b>, negação e <b>doch</b>.</div></div>
+</div>
+</section>
+
+<section class="card" id="wfragen">
+<h2>2. W-FRAGEN — escolher a palavra certa</h2><p class="intro">Primeiro descubra que informação você quer. Depois monte: <b>W + verbo conjugado + pessoa</b>.</p>
+<div style="overflow-x:auto"><table class="wtable"><thead><tr><th>W</th><th>Significado</th><th>Quando usar</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td><b>Wie?</b></td><td>como?</td><td>nome, condição, maneira</td><td>Wie heißt du?</td></tr>
+<tr><td><b>Wo?</b></td><td>onde?</td><td>localização</td><td>Wo wohnst du?</td></tr>
+<tr><td><b>Woher?</b></td><td>de onde?</td><td>origem</td><td>Woher kommst du?</td></tr>
+<tr><td><b>Was?</b></td><td>o quê?</td><td>atividade / profissão / coisa</td><td>Was machst du beruflich?</td></tr>
+<tr><td><b>Welche?</b></td><td>qual/quais?</td><td>escolher dentro de uma categoria</td><td>Welche Sprachen sprichst du?</td></tr>
+<tr><td><b>Wie alt?</b></td><td>quantos anos?</td><td>idade</td><td>Wie alt bist du?</td></tr>
+<tr><td><b>Wer?</b></td><td>quem?</td><td>pessoa</td><td>Wer ist das?</td></tr>
+<tr><td><b>Wie viele?</b></td><td>quantos?</td><td>quantidade contável</td><td>Wie viele Kinder hast du?</td></tr>
+</tbody></table></div>
+<div class="rule-grid" style="margin-top:10px"><div class="rule good"><h3>WO</h3><div class="formula">Wo + wohnst + du?</div><div class="example">Lugar onde você está/mora.<br><b>Wo → in</b><br>Ich wohne <b>in</b> São Paulo.</div></div><div class="rule good"><h3>WOHER</h3><div class="formula">Woher + kommst + du?</div><div class="example">Origem.<br><b>Woher → aus</b><br>Ich komme <b>aus</b> Brasilien.</div></div><div class="rule warn"><h3>WELCHE</h3><div class="formula">Welche Sprachen + sprichst + du?</div><div class="example">Não use “Was sprichst du?” para perguntar quais idiomas alguém fala.</div></div></div>
+<div class="note"><b>Erros que já apareceram:</b> “Wie kommst du?” → <b>Woher kommst du?</b> • “Wie Beruf bist du?” → <b>Was bist du von Beruf?</b> • “Was sprichst du?” → <b>Welche Sprachen sprichst du?</b></div>
+</section>
+
+<section class="card" id="conjugacao">
+<h2>3. CONJUGAÇÃO — seu principal ponto de treino</h2><p class="intro">Você normalmente escolhe o verbo certo, mas às vezes usa a terminação de outra pessoa. Automatize pronome → forma verbal.</p>
+<div style="overflow-x:auto"><table class="vtable"><thead><tr><th>Verbo</th><th>ich</th><th>du</th><th>er/sie/es</th><th>wir</th><th>ihr</th><th>Sie/sie</th></tr></thead><tbody id="verbRows"></tbody></table></div>
+<div class="weak-grid" style="margin-top:10px"><div class="weak error"><h3>Erro típico 1</h3><div><span class="x">✗ Ich kommst</span><br><span class="ok">✓ Ich komme</span></div><ul><li><b>ich</b> pede normalmente <b>-e</b></li><li><b>du</b> pede normalmente <b>-st</b></li></ul></div><div class="weak error"><h3>Erro típico 2</h3><div><span class="x">✗ Woher kommst ihr?</span><br><span class="ok">✓ Woher kommt ihr?</span></div><ul><li><b>ihr → kommt</b></li><li>não confundir com <b>du → kommst</b></li></ul></div><div class="weak error"><h3>Erro típico 3</h3><div><span class="x">✗ Ich sprechen</span><br><span class="ok">✓ Ich spreche</span></div><ul><li><b>ich spreche</b></li><li><b>du sprichst</b> é irregular</li></ul></div></div>
+</section>
+
+<section class="card" id="verbos-chave">
+<h2>4. SEIN × HABEN × HEISSEN</h2><p class="intro">Três verbos que você precisa escolher automaticamente.</p>
+<div class="rule-grid"><div class="rule good"><h3>heißen = chamar-se</h3><div class="formula">Ich heiße Marcelo.</div><div class="example">Use para <b>nome</b>.<br>Wie heißt du?</div></div><div class="rule good"><h3>sein = ser/estar</h3><div class="formula">Ich bin ...</div><div class="example">idade: Ich bin 49 Jahre alt.<br>estado civil: Ich bin verheiratet.<br>profissão: Ich bin Unternehmer.</div></div><div class="rule good"><h3>haben = ter</h3><div class="formula">Ich habe ...</div><div class="example">família/posse:<br>Ich habe eine Tochter.<br>Ich habe ein Kind.</div></div></div>
+<div class="note"><b>Evite:</b> “Ich heiße Unternehmer” ✗ → <b>Ich bin Unternehmer.</b> ✓ &nbsp; | &nbsp; “Ich bin ein Kind” ✗ quando quer dizer que tem um filho → <b>Ich habe ein Kind.</b> ✓</div>
+</section>
+
+<section class="card" id="negacao">
+<h2>5. NICHT / KEIN + JA / NEIN / DOCH</h2><p class="intro">Aqui o objetivo é reconhecer o tipo de pergunta e escolher a resposta certa.</p>
+<div class="neg-grid"><div class="neg"><h3>nicht</h3><div class="pair"><b>Ich bin nicht ledig.</b><div class="pt">Não sou solteiro.</div></div><div class="pair"><b>Ich arbeite nicht in Berlin.</b><div class="pt">Não trabalho em Berlim.</div></div><div class="pair"><b>Bist du nicht verheiratet?</b><br><span class="key">Doch</span>, ich bin verheiratet.</div></div><div class="neg"><h3>kein / keine / keinen</h3><div class="pair"><b>kein Kind</b> — das Kind</div><div class="pair"><b>keine Tochter</b> — die Tochter</div><div class="pair"><b>keinen Sohn</b> — der Sohn</div><div class="pair">Hast du keine Tochter?<br><span class="key">Doch</span>, ich habe eine Tochter.</div></div></div>
+<div class="rule-grid" style="margin-top:10px"><div class="rule"><h3>Pergunta positiva</h3><div class="example">Hast du eine Tochter?<br>→ <b>Ja</b>, ich habe eine Tochter.<br>→ <b>Nein</b>, ich habe keine Tochter.</div></div><div class="rule"><h3>Pergunta negativa</h3><div class="example">Hast du keine Tochter?<br>Se você tem uma filha:<br>→ <b>Doch</b>, ich habe eine Tochter.</div></div><div class="rule warn"><h3>Memorize 3 blocos</h3><div class="example"><b>kein Kind</b><br><b>keine Tochter</b><br><b>keinen Sohn</b></div></div></div>
+</section>
+
+<section class="card" id="qa">
+<h2>6. PERGUNTAS E RESPOSTAS — du × Sie</h2><p class="intro">A professora provavelmente usará <b>Sie</b>. Suas respostas continuam principalmente com <b>ich</b>.</p>
+<div class="grid" id="qaGrid"><div class="cell head">TEMA</div><div class="cell head">VERBO</div><div class="cell head">INFORMAL — du</div><div class="cell head">FORMAL — Sie</div></div>
+</section>
+
+<section class="card">
+<h2>7. BERUF — profissão</h2><p class="intro">Duas respostas simples para sua prova. Não precisa dizer ambas na mesma apresentação.</p>
+<div class="job-grid"><div class="mini"><button class="speak" onclick="speak('Ich bin Unternehmer.')">🔊</button><div class="word">Ich bin Unternehmer.</div><div class="meaning">Sou empresário.</div></div><div class="mini"><button class="speak" onclick="speak('Ich arbeite im Bereich Umwelttechnik.')">🔊</button><div class="word">Ich arbeite im Bereich Umwelttechnik.</div><div class="meaning">Trabalho na área de engenharia ambiental.</div></div><div class="mini"><button class="speak" onclick="speak('Was machen Sie beruflich?')">🔊</button><div class="word">Was machen Sie beruflich?</div><div class="meaning">O que o senhor faz profissionalmente?</div></div></div>
+</section>
+
+<section class="card" id="familia">
+<h2>8. FAMILIE — vocabulário essencial</h2><p class="intro">Vocabulário que apareceu nas lições e nos exercícios.</p><div class="family-grid" id="familyGrid"></div>
+</section>
+
+
+<section class="card" id="estado-civil">
+<span class="lesson-tag">Lições 2–3</span>
+<h2>9. ESTADO CIVIL E RELACIONAMENTO</h2>
+<p class="intro">Vocabulário para falar de relacionamento e estado civil, com frases prontas para a prova.</p>
+<div class="status-grid">
+  <div class="status-card"><button class="speak" onclick="speak('verheiratet')">🔊</button><div class="big">verheiratet</div><div class="small">casado(a)</div></div>
+  <div class="status-card"><button class="speak" onclick="speak('Single')">🔊</button><div class="big">Single</div><div class="small">solteiro(a)</div></div>
+  <div class="status-card"><button class="speak" onclick="speak('geschieden')">🔊</button><div class="big">geschieden</div><div class="small">divorciado(a)</div></div>
+  <div class="status-card"><button class="speak" onclick="speak('verwitwet')">🔊</button><div class="big">verwitwet</div><div class="small">viúvo(a)</div></div>
+</div>
+<div class="qa-list" style="margin-top:10px">
+  <div class="qa"><div class="q">Sind Sie verheiratet?</div><div class="a">Ja, ich bin verheiratet.</div></div>
+  <div class="qa"><div class="q">Ist er geschieden?</div><div class="a">Ja, er ist geschieden.</div></div>
+  <div class="qa"><div class="q">Ist sie verwitwet?</div><div class="a">Ja, sie ist verwitwet.</div></div>
+  <div class="qa"><div class="q">Ist er Single?</div><div class="a">Ja, er ist Single.</div></div>
+</div>
+<div class="note"><b>Regra:</b> com estado civil, use <b>sein</b>: ich bin, du bist, er/sie ist, wir sind, ihr seid, Sie sind.</div>
+</section>
+
+<section class="card" id="numeros">
+<span class="lesson-tag">Lições 1–4</span>
+<h2>10. NÚMEROS — ZAHLEN</h2>
+<p class="intro">Revisão prática dos números usados em idade, telefone e preços.</p>
+<div class="sub">0–20 — precisam ficar automáticos</div>
+<div class="num-grid">
+  <div class="num-card"><div class="big">0 null</div></div><div class="num-card"><div class="big">1 eins</div></div>
+  <div class="num-card"><div class="big">2 zwei</div></div><div class="num-card"><div class="big">3 drei</div></div>
+  <div class="num-card"><div class="big">4 vier</div></div><div class="num-card"><div class="big">5 fünf</div></div>
+  <div class="num-card"><div class="big">6 sechs</div></div><div class="num-card"><div class="big">7 sieben</div></div>
+  <div class="num-card"><div class="big">8 acht</div></div><div class="num-card"><div class="big">9 neun</div></div>
+  <div class="num-card"><div class="big">10 zehn</div></div><div class="num-card"><div class="big">11 elf</div></div>
+  <div class="num-card"><div class="big">12 zwölf</div></div><div class="num-card"><div class="big">13 dreizehn</div></div>
+  <div class="num-card"><div class="big">14 vierzehn</div></div><div class="num-card"><div class="big">15 fünfzehn</div></div>
+  <div class="num-card"><div class="big">16 sechzehn</div><div class="small">não: sechszehn</div></div>
+  <div class="num-card"><div class="big">17 siebzehn</div><div class="small">não: siebenzehn</div></div>
+  <div class="num-card"><div class="big">18 achtzehn</div></div><div class="num-card"><div class="big">19 neunzehn</div></div>
+  <div class="num-card"><div class="big">20 zwanzig</div></div>
+</div>
+<div class="sub">Dezenas</div>
+<div class="num-grid">
+  <div class="num-card"><div class="big">20 zwanzig</div></div><div class="num-card"><div class="big">30 dreißig</div></div>
+  <div class="num-card"><div class="big">40 vierzig</div></div><div class="num-card"><div class="big">50 fünfzig</div></div>
+  <div class="num-card"><div class="big">60 sechzig</div></div><div class="num-card"><div class="big">70 siebzig</div></div>
+  <div class="num-card"><div class="big">80 achtzig</div></div><div class="num-card"><div class="big">90 neunzig</div></div>
+  <div class="num-card"><div class="big">100 hundert</div></div>
+</div>
+<div class="rule-grid" style="margin-top:10px">
+  <div class="rule good"><h3>21–99</h3><div class="formula">unidade + und + dezena</div><div class="example">24 = <b>vierundzwanzig</b><br>49 = <b>neunundvierzig</b><br>86 = <b>sechsundachtzig</b></div></div>
+  <div class="rule"><h3>Centenas</h3><div class="example">108 = <b>einhundertacht</b><br>128 = <b>einhundertachtundzwanzig</b><br>247 = <b>zweihundertsiebenundvierzig</b></div></div>
+  <div class="rule"><h3>Mil e milhão</h3><div class="example">1.000 = <b>tausend / eintausend</b><br>2.389 = <b>zweitausenddreihundertneunundachtzig</b><br>1.000.000 = <b>eine Million</b></div></div>
+</div>
+<div class="note"><b>Sua idade:</b> 49 = <b>neunundvierzig</b>. Frase: <b>Ich bin neunundvierzig Jahre alt.</b></div>
+</section>
+
+<section class="card" id="moveis">
+<span class="lesson-tag">Lição 4 — vocabulário consolidado</span>
+<h2>11. ARTIGOS + OBJETOS + MÖBEL UND HAUS</h2>
+<p class="intro">Primeiro reconheça o gênero da palavra. Depois conecte o artigo definido, o indefinido e o negativo.</p>
+
+<div class="sub">Artigos — regra-base</div>
+<div class="rule-grid">
+  <div class="rule good"><h3>Masculino</h3><div class="formula">DER → EIN → KEIN</div><div class="example"><b>der Tisch</b><br>Das ist <b>ein Tisch</b>.<br>Das ist <b>kein Tisch</b>.</div></div>
+  <div class="rule good"><h3>Feminino</h3><div class="formula">DIE → EINE → KEINE</div><div class="example"><b>die Lampe</b><br>Das ist <b>eine Lampe</b>.<br>Das ist <b>keine Lampe</b>.</div></div>
+  <div class="rule good"><h3>Neutro</h3><div class="formula">DAS → EIN → KEIN</div><div class="example"><b>das Buch</b><br>Das ist <b>ein Buch</b>.<br>Das ist <b>kein Buch</b>.</div></div>
+</div>
+<div class="note"><b>Plural:</b> o artigo definido é <b>die</b>. Não existe artigo indefinido plural equivalente a “uns/umas” neste padrão. Para negar, use <b>keine</b>: <b>die Tische → keine Tische</b>.</div>
+<div class="note"><b>Atenção:</b> mais adiante aparece o acusativo masculino: <b>ein Sohn → einen Sohn</b> e <b>kein Sohn → keinen Sohn</b>. Por enquanto, memorize essa diferença como uma exceção importante do bloco com <b>haben</b>.</div>
+
+<div class="sub">Vocabulário consolidado — Objetos + Möbel und Haus</div>
+<div class="furniture-grid">
+  <div class="furniture-card"><button class="speak" onclick="speak('der Bleistift, die Bleistifte')">🔊</button><div class="big">der Bleistift</div><div class="small">lápis • Pl.: die Bleistifte</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Kugelschreiber, der Kuli, die Kugelschreiber')">🔊</button><div class="big">der Kugelschreiber / Kuli</div><div class="small">caneta • Pl.: die Kugelschreiber</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Schlüssel, die Schlüssel')">🔊</button><div class="big">der Schlüssel</div><div class="small">chave • Pl.: die Schlüssel</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Stift, die Stifte')">🔊</button><div class="big">der Stift</div><div class="small">caneta / instrumento de escrita • Pl.: die Stifte</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Tisch, die Tische')">🔊</button><div class="big">der Tisch</div><div class="small">mesa • Pl.: die Tische</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Stuhl, die Stühle')">🔊</button><div class="big">der Stuhl</div><div class="small">cadeira • Pl.: die Stühle</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Schrank, die Schränke')">🔊</button><div class="big">der Schrank</div><div class="small">armário • Pl.: die Schränke</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('der Sessel, die Sessel')">🔊</button><div class="big">der Sessel</div><div class="small">poltrona • Pl.: die Sessel</div></div>
+
+  <div class="furniture-card"><button class="speak" onclick="speak('die Brille, die Brillen')">🔊</button><div class="big">die Brille</div><div class="small">óculos • Pl.: die Brillen</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Kamera, die Kameras')">🔊</button><div class="big">die Kamera</div><div class="small">câmera • Pl.: die Kameras</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Flasche, die Flaschen')">🔊</button><div class="big">die Flasche</div><div class="small">garrafa • Pl.: die Flaschen</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Kette, die Ketten')">🔊</button><div class="big">die Kette</div><div class="small">colar / corrente • Pl.: die Ketten</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Tasche, die Taschen')">🔊</button><div class="big">die Tasche</div><div class="small">bolsa • Pl.: die Taschen</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Uhr, die Uhren')">🔊</button><div class="big">die Uhr</div><div class="small">relógio • Pl.: die Uhren</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('die Lampe, die Lampen')">🔊</button><div class="big">die Lampe</div><div class="small">luminária • Pl.: die Lampen</div></div>
+
+  <div class="furniture-card"><button class="speak" onclick="speak('das Buch, die Bücher')">🔊</button><div class="big">das Buch</div><div class="small">livro • Pl.: die Bücher</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('das Handy, die Handys')">🔊</button><div class="big">das Handy</div><div class="small">celular • Pl.: die Handys</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('das Bett, die Betten')">🔊</button><div class="big">das Bett</div><div class="small">cama • Pl.: die Betten</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('das Sofa, die Sofas')">🔊</button><div class="big">das Sofa</div><div class="small">sofá • Pl.: die Sofas</div></div>
+  <div class="furniture-card"><button class="speak" onclick="speak('das Regal, die Regale')">🔊</button><div class="big">das Regal</div><div class="small">estante • Pl.: die Regale</div></div>
+</div>
+
+<div class="sub">Treino com os artigos</div>
+<div class="qa-list">
+  <div class="qa"><div class="q">Ist das ein Tisch?</div><div class="a">Ja, das ist ein Tisch.</div><div class="labels">der → ein</div></div>
+  <div class="qa"><div class="q">Ist das eine Lampe?</div><div class="a">Ja, das ist eine Lampe.</div><div class="labels">die → eine</div></div>
+  <div class="qa"><div class="q">Ist das ein Buch?</div><div class="a">Ja, das ist ein Buch.</div><div class="labels">das → ein</div></div>
+  <div class="qa"><div class="q">Ist das ein Tisch?</div><div class="a">Nein, das ist kein Tisch.</div><div class="labels">der → kein</div></div>
+  <div class="qa"><div class="q">Ist das eine Lampe?</div><div class="a">Nein, das ist keine Lampe.</div><div class="labels">die → keine</div></div>
+  <div class="qa"><div class="q">Sind das Tische?</div><div class="a">Nein, das sind keine Tische.</div><div class="labels">Plural → keine</div></div>
+</div>
+
+<div class="sub">Adjetivos úteis</div>
+<div class="adj-grid">
+  <div class="adj-card"><button class="speak" onclick="speak('teuer')">🔊</button><div class="big">teuer</div><div class="small">caro</div></div>
+  <div class="adj-card"><button class="speak" onclick="speak('billig')">🔊</button><div class="big">billig</div><div class="small">barato</div></div>
+  <div class="adj-card"><button class="speak" onclick="speak('groß')">🔊</button><div class="big">groß</div><div class="small">grande</div></div>
+  <div class="adj-card"><button class="speak" onclick="speak('klein')">🔊</button><div class="big">klein</div><div class="small">pequeno</div></div>
+  <div class="adj-card"><button class="speak" onclick="speak('schön')">🔊</button><div class="big">schön</div><div class="small">bonito</div></div>
+  <div class="adj-card"><button class="speak" onclick="speak('hässlich')">🔊</button><div class="big">hässlich</div><div class="small">feio</div></div>
+</div>
+</section>
+
+<section class="card" id="precos">
+<span class="lesson-tag">Lição 4</span>
+<h2>12. CARO, BARATO E PREÇOS</h2>
+<p class="intro">Estruturas essenciais com <b>kosten</b>.</p>
+<div class="price-box">
+  <div class="price-line"><button class="speak" onclick="speak('Wie viel kostet der Stuhl?')">🔊</button> <b>Wie viel kostet der Stuhl?</b><div class="pt">Quanto custa a cadeira?</div></div>
+  <div class="price-line"><button class="speak" onclick="speak('Der Stuhl kostet vierundsechzig Euro.')">🔊</button> <b>Der Stuhl kostet vierundsechzig Euro.</b><div class="pt">A cadeira custa 64 euros.</div></div>
+  <div class="price-line"><button class="speak" onclick="speak('Wie viel kostet der Tisch?')">🔊</button> <b>Wie viel kostet der Tisch?</b><div class="pt">Quanto custa a mesa?</div></div>
+  <div class="price-line"><button class="speak" onclick="speak('Der Tisch kostet einhundertneunundfünfzig Euro.')">🔊</button> <b>Der Tisch kostet einhundertneunundfünfzig Euro.</b><div class="pt">A mesa custa 159 euros.</div></div>
+  <div class="price-line"><button class="speak" onclick="speak('Das ist teuer.')">🔊</button> <b>Das ist teuer.</b> = Isso é caro.</div>
+  <div class="price-line"><button class="speak" onclick="speak('Das ist billig.')">🔊</button> <b>Das ist billig.</b> = Isso é barato.</div>
+  <div class="price-line"><button class="speak" onclick="speak('fünfzehn Euro achtzig')">🔊</button> <b>15,80 € = fünfzehn Euro achtzig</b></div>
+</div>
+<div class="note"><b>kosten:</b> ich koste • du kostest • er/sie/es kostet • wir kosten • ihr kostet • sie/Sie kosten. Para objetos no singular, você verá muito <b>kostet</b>.</div>
+</section>
+
+<section class="card" id="verbos-novos">
+<span class="lesson-tag">Até a Lição 4</span>
+<h2>13. VERBOS NOVOS — RESUMO ACUMULADO</h2>
+<p class="intro">Além dos verbos básicos, estes já aparecem no seu material e precisam entrar no vocabulário ativo.</p>
+<div class="job-grid">
+  <div class="mini"><div class="word">arbeiten</div><div class="meaning">trabalhar — Ich arbeite als ...</div></div>
+  <div class="mini"><div class="word">sprechen</div><div class="meaning">falar — Ich spreche Deutsch.</div></div>
+  <div class="mini"><div class="word">lernen</div><div class="meaning">aprender/estudar — Ich lerne Deutsch.</div></div>
+  <div class="mini"><div class="word">leben</div><div class="meaning">viver — Ich lebe in São Paulo.</div></div>
+  <div class="mini"><div class="word">kosten</div><div class="meaning">custar — Der Tisch kostet ...</div></div>
+  <div class="mini"><div class="word">wohnen</div><div class="meaning">morar — Ich wohne in ...</div></div>
+</div>
+</section>
+
+<section class="card"><h2>14. Revisão rápida — exercício do livro</h2><p class="intro">Estruturas que apareceram diretamente na revisão da lição.</p><div class="qa-list"><div class="qa"><div class="q">Woher kommt ihr?</div><div class="a">Aus Griechenland.</div><div class="labels">ihr → kommt</div></div><div class="qa"><div class="q">Du sprichst aber super Deutsch!</div><div class="a">Ich lebe schon viele Jahre hier.</div><div class="labels">sprechen → du sprichst • leben → ich lebe</div></div><div class="qa"><div class="q">Was seid ihr von Beruf?</div><div class="a">Ich arbeite als Kfz-Mechatroniker.</div><div class="labels">ihr → seid</div></div><div class="qa"><div class="q">Welche Sprachen sprechen Sie?</div><div class="a">Ich spreche Englisch und ein bisschen Deutsch.</div><div class="labels">formal Sie → sprechen</div></div></div></section>
+
+\n<section class="card" id="treino-intensivo"><span class="lesson-tag">Preparação para a prova</span><h2>15. TREINO INTENSIVO AUTOCORRIGÍVEL</h2><p class="intro">Banco de exercícios focado nas Lições 1–4 e nos erros que mais apareceram no seu treino. Escolha um tema, responda e receba a correção na hora. Você pode repetir quantas vezes quiser e refazer somente os erros.</p><div class="scorebar"><span class="scorepill">Respondidas: <span id="qDone">0</span></span><span class="scorepill">Acertos: <span id="qRight">0</span></span><span class="scorepill">Erros: <span id="qWrong">0</span></span><span class="scorepill">Aproveitamento: <span id="qPct">0%</span></span></div><div class="quiz-wrap"><div class="quiz-menu" id="quizMenu"></div><div class="quiz-panel"><div class="quiz-meta"><span id="quizCat">Escolha um treino</span><span id="quizCount"></span></div><div class="quiz-question" id="quizQuestion">Comece por “Misto — estilo prova” ou escolha um ponto específico.</div><div id="quizAnswer"></div><div class="quiz-feedback" id="quizFeedback"></div><div class="quiz-actions"><button class="primary" id="checkBtn" onclick="checkQuiz()" style="display:none">✓ Conferir</button><button onclick="nextQuiz()">Próxima →</button><button onclick="speakQuiz()">🔊 Ouvir</button><button onclick="retryErrors()">↻ Refazer erros</button><button onclick="resetQuiz()">Zerar placar</button></div><div class="quiz-tip">Nas respostas digitadas, maiúsculas/minúsculas e pontuação final não impedem o acerto. Umlauts (ä/ö/ü) e ß também têm tolerância para digitação, mas a forma correta sempre será mostrada.</div></div></div></section>\n</main>
+<script>
+let rate=.92,currentQuestion=null;
+function setRate(v){rate=v;document.getElementById('rate').textContent='Velocidade: '+(v<.8?'devagar':'normal')}
+function speak(t){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=rate;const vs=speechSynthesis.getVoices();const de=vs.find(v=>v.lang==='de-DE')||vs.find(v=>v.lang&&v.lang.startsWith('de'));if(de)u.voice=de;speechSynthesis.speak(u)}
+const oralQuestions=[
+['Wie heißen Sie?','Ich heiße Marcelo Martins.'],['Woher kommen Sie?','Ich komme aus Brasilien.'],['Wo wohnen Sie?','Ich wohne in São Paulo.'],['Wie alt sind Sie?','Ich bin 49 Jahre alt.'],['Sind Sie verheiratet?','Ja, ich bin verheiratet.'],['Haben Sie Kinder?','Ja, ich habe eine Tochter.'],['Was sind Sie von Beruf?','Ich bin Unternehmer.'],['Was machen Sie beruflich?','Ich arbeite im Bereich Umwelttechnik.'],['Welche Sprachen sprechen Sie?','Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch.'],['Wie ist Ihre Telefonnummer?','Meine Telefonnummer ist ...']
+];
+function newQuestion(){currentQuestion=oralQuestions[Math.floor(Math.random()*oralQuestions.length)];document.getElementById('randomQ').textContent=currentQuestion[0];document.getElementById('randomA').style.display='none';document.getElementById('randomA').textContent=currentQuestion[1]}
+function showAnswer(){if(!currentQuestion)newQuestion();const a=document.getElementById('randomA');a.textContent=currentQuestion[1];a.style.display='block'}
+function speakCurrent(){if(!currentQuestion)newQuestion();speak(currentQuestion[0])}
+const verbData=[
+['sein','bin','bist','ist','sind','seid','sind'],['haben','habe','hast','hat','haben','habt','haben'],['heißen','heiße','heißt','heißt','heißen','heißt','heißen'],['kommen','komme','kommst','kommt','kommen','kommt','kommen'],['wohnen','wohne','wohnst','wohnt','wohnen','wohnt','wohnen'],['arbeiten','arbeite','arbeitest','arbeitet','arbeiten','arbeitet','arbeiten'],['lernen','lerne','lernst','lernt','lernen','lernt','lernen'],['leben','lebe','lebst','lebt','leben','lebt','leben'],['sprechen','spreche','sprichst','spricht','sprechen','sprecht','sprechen'],['kosten','koste','kostest','kostet','kosten','kostet','kosten']
+];
+const vbody=document.getElementById('verbRows');verbData.forEach(v=>{vbody.insertAdjacentHTML('beforeend',`<tr><td><button class="speak" onclick='speak(${JSON.stringify(v[0])})'>🔊</button> <b>${v[0]}</b></td><td>${v[1]}</td><td>${v[2]}</td><td>${v[3]}</td><td>${v[4]}</td><td>${v[5]}</td><td>${v[6]}</td></tr>`)});
+const rows=[
+['NAME','heißen','Wie heißt du?','Ich heiße Marcelo.','Wie heißen Sie?','Ich heiße Marcelo Martins.'],['HERKUNFT','kommen','Woher kommst du?','Ich komme aus Brasilien.','Woher kommen Sie?','Ich komme aus Brasilien.'],['WOHNORT','wohnen','Wo wohnst du?','Ich wohne in São Paulo.','Wo wohnen Sie?','Ich wohne in São Paulo.'],['ALTER','sein','Wie alt bist du?','Ich bin 49 Jahre alt.','Wie alt sind Sie?','Ich bin 49 Jahre alt.'],['FAMILIENSTAND','sein','Bist du verheiratet?','Ja, ich bin verheiratet.','Sind Sie verheiratet?','Ja, ich bin verheiratet.'],['KINDER','haben','Hast du Kinder?','Ja, ich habe eine Tochter.','Haben Sie Kinder?','Ja, ich habe eine Tochter.'],['BERUF','sein / arbeiten','Was machst du beruflich?','Ich bin Unternehmer.','Was machen Sie beruflich?','Ich arbeite im Bereich Umwelttechnik.'],['SPRACHEN','sprechen','Welche Sprachen sprichst du?','Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch.','Welche Sprachen sprechen Sie?','Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch.'],['TELEFONNUMMER','sein','Wie ist deine Telefonnummer?','Meine Telefonnummer ist ...','Wie ist Ihre Telefonnummer?','Meine Telefonnummer ist ...']
+];
+function qaBlock(q,a,cls){return `<div class="cell ${cls}"><div class="line"><button class="speak" onclick='speak(${JSON.stringify(q)})'>🔊</button><div><div class="de">${q}</div></div></div><div class="line"><button class="speak" onclick='speak(${JSON.stringify(a)})'>🔊</button><div><div class="de">${a}</div></div></div></div>`}
+const qg=document.getElementById('qaGrid');rows.forEach(r=>qg.insertAdjacentHTML('beforeend',`<div class="cell topic">${r[0]}</div><div class="cell verb">${r[1]}</div>${qaBlock(r[2],r[3],'du')}${qaBlock(r[4],r[5],'sie')}`));
+const family=[['der Vater','pai'],['die Mutter','mãe'],['die Eltern','pais'],['das Kind / die Kinder','filho(a) / filhos'],['der Sohn','filho'],['die Tochter','filha'],['der Bruder','irmão'],['die Schwester','irmã'],['der Großvater / Opa','avô'],['die Großmutter / Oma','avó'],['der Onkel','tio'],['die Tante','tia'],['die Geschwister','irmãos/irmãs'],['die Großeltern','avós'],['der Enkel','neto'],['die Enkelin','neta'],['die Enkelkinder','netos']];
+const fg=document.getElementById('familyGrid');family.forEach(f=>fg.insertAdjacentHTML('beforeend',`<div class="mini"><button class="speak" onclick='speak(${JSON.stringify(f[0].replace(/\//g,','))})'>🔊</button><div class="word">${f[0]}</div><div class="meaning">${f[1]}</div></div>`));
+\nconst quizBank=[
+{c:'Misto — estilo prova',q:'Complete: Ich ___ aus Brasilien.',a:'komme',alts:['komme'],t:'text',why:'ich + kommen → ich komme.'},
+{c:'Misto — estilo prova',q:'Qual pergunta combina com “Ich wohne in São Paulo.”?',o:['Woher kommst du?','Wo wohnst du?','Wie heißt du?','Was machst du?'],a:'Wo wohnst du?',t:'mc'},
+{c:'Misto — estilo prova',q:'Hast du keine Tochter?',o:['Ja, ich habe keine Tochter.','Doch, ich habe eine Tochter.','Nein, ich habe eine Tochter.','Doch, ich bin eine Tochter.'],a:'Doch, ich habe eine Tochter.',t:'mc',why:'Pergunta negativa + você tem uma filha → Doch.'},
+{c:'Misto — estilo prova',q:'Escolha a frase correta.',o:['Ich sprechen Deutsch.','Ich sprecht Deutsch.','Ich spreche Deutsch.','Ich sprichst Deutsch.'],a:'Ich spreche Deutsch.',t:'mc'},
+{c:'W-Fragen',q:'___ wohnst du?',a:'Wo',t:'text',why:'Wo = onde.'},
+{c:'W-Fragen',q:'___ kommst du?',a:'Woher',t:'text',why:'Woher = de onde; resposta típica: aus Brasilien.'},
+{c:'W-Fragen',q:'___ alt bist du?',a:'Wie',t:'text'},
+{c:'W-Fragen',q:'___ machst du beruflich?',a:'Was',t:'text'},
+{c:'W-Fragen',q:'___ Sprachen sprichst du?',a:'Welche',t:'text'},
+{c:'W-Fragen',q:'___ viele Kinder hast du?',a:'Wie',t:'text'},
+{c:'W-Fragen',q:'Organize a pergunta para “Ich heiße Marcelo.”',a:'Wie heißt du',alts:['Wie heißt du?'],t:'text'},
+{c:'W-Fragen',q:'Qual significa “De onde você vem?”',o:['Wo wohnst du?','Woher kommst du?','Wie kommst du?','Wer bist du?'],a:'Woher kommst du?',t:'mc'},
+{c:'Conjugação',q:'ich + wohnen = ?',a:'wohne',t:'text'},
+{c:'Conjugação',q:'du + kommen = ?',a:'kommst',t:'text'},
+{c:'Conjugação',q:'ihr + kommen = ?',a:'kommt',t:'text',why:'ihr usa normalmente -t.'},
+{c:'Conjugação',q:'du + sprechen = ?',a:'sprichst',t:'text',why:'sprechen muda e → i em du.'},
+{c:'Conjugação',q:'er + haben = ?',a:'hat',t:'text'},
+{c:'Conjugação',q:'du + sein = ?',a:'bist',t:'text'},
+{c:'Conjugação',q:'ihr + sein = ?',a:'seid',t:'text'},
+{c:'Conjugação',q:'Sie (formal) + kommen = ?',a:'kommen',t:'text'},
+{c:'sein / haben / heißen',q:'Eu me chamo Marcelo.',o:['Ich bin Marcelo.','Ich habe Marcelo.','Ich heiße Marcelo.'],a:'Ich heiße Marcelo.',t:'mc'},
+{c:'sein / haben / heißen',q:'Eu tenho um filho/uma criança.',o:['Ich bin ein Kind.','Ich habe ein Kind.','Ich heiße ein Kind.'],a:'Ich habe ein Kind.',t:'mc'},
+{c:'sein / haben / heißen',q:'Eu sou empresário.',o:['Ich heiße Unternehmer.','Ich habe Unternehmer.','Ich bin Unternehmer.'],a:'Ich bin Unternehmer.',t:'mc'},
+{c:'nicht / kein / doch',q:'Ich habe ___ Kinder. (nenhum filho)',a:'keine',t:'text'},
+{c:'nicht / kein / doch',q:'Ich habe ___ Sohn. (nenhum filho homem)',a:'keinen',t:'text',why:'Masculino no Akkusativ: keinen Sohn.'},
+{c:'nicht / kein / doch',q:'Ich bin ___ ledig. (não sou solteiro)',a:'nicht',t:'text'},
+{c:'nicht / kein / doch',q:'Wohnst du nicht in São Paulo? — ___, ich wohne in São Paulo.',a:'Doch',t:'text'},
+{c:'nicht / kein / doch',q:'Hast du einen Sohn? — Nein, ich habe ___ Sohn.',a:'keinen',t:'text'},
+{c:'Akkusativ básico',q:'Ich finde ___ Tisch schön.',o:['der','den','die','das'],a:'den',t:'mc',why:'Masculino: der → den no Akkusativ.'},
+{c:'Akkusativ básico',q:'Findest du ___ Lampe modern?',o:['der','den','die','das'],a:'die',t:'mc'},
+{c:'Akkusativ básico',q:'Ich finde ___ Sofa klein.',o:['der','den','die','das'],a:'das',t:'mc'},
+{c:'Akkusativ básico',q:'Ich habe ___ Sohn.',o:['ein','eine','einen','einem'],a:'einen',t:'mc'},
+{c:'Família',q:'avó = ?',o:['der Großvater','die Großmutter','die Tante','die Schwester'],a:'die Großmutter',t:'mc'},
+{c:'Família',q:'tio = ?',a:'der Onkel',t:'text'},
+{c:'Família',q:'irmãos/irmãs (grupo) = ?',a:'die Geschwister',t:'text'},
+{c:'Família',q:'neto = ?',a:'der Enkel',t:'text'},
+{c:'Família',q:'neta = ?',a:'die Enkelin',t:'text'},
+{c:'Artigos + objetos',q:'___ Tisch',o:['der','die','das'],a:'der',t:'mc'},
+{c:'Artigos + objetos',q:'___ Lampe',o:['der','die','das'],a:'die',t:'mc'},
+{c:'Artigos + objetos',q:'___ Bett',o:['der','die','das'],a:'das',t:'mc'},
+{c:'Artigos + objetos',q:'Das ist ___ Kamera.',o:['ein','eine','einen'],a:'eine',t:'mc'},
+{c:'Artigos + objetos',q:'Das ist ___ Buch.',o:['ein','eine','einen'],a:'ein',t:'mc'},
+{c:'Artigos + objetos',q:'Plural de “das Buch”',a:'die Bücher',t:'text'},
+{c:'Móveis + preços',q:'der Schrank = ?',o:['mesa','armário','cadeira','poltrona'],a:'armário',t:'mc'},
+{c:'Móveis + preços',q:'der Sessel = ?',o:['sofá','estante','poltrona','cama'],a:'poltrona',t:'mc'},
+{c:'Móveis + preços',q:'teuer = ?',o:['barato','bonito','caro','pequeno'],a:'caro',t:'mc'},
+{c:'Móveis + preços',q:'billig = ?',o:['barato','caro','grande','feio'],a:'barato',t:'mc'},
+{c:'Móveis + preços',q:'Como perguntar “Quanto custa a mesa?”',o:['Was kostet du Tisch?','Wie viel kostet der Tisch?','Wo kostet der Tisch?','Welche kostet Tisch?'],a:'Wie viel kostet der Tisch?',t:'mc'},
+{c:'Estado civil',q:'verheiratet = ?',o:['solteiro','casado','divorciado','viúvo'],a:'casado',t:'mc'},
+{c:'Estado civil',q:'geschieden = ?',o:['casado','solteiro','divorciado','viúvo'],a:'divorciado',t:'mc'},
+{c:'Estado civil',q:'verwitwet = ?',o:['casado','solteiro','divorciado','viúvo'],a:'viúvo',t:'mc'},
+{c:'Números',q:'49 em alemão = ?',a:'neunundvierzig',t:'text'},
+{c:'Números',q:'24 em alemão = ?',a:'vierundzwanzig',t:'text'},
+{c:'Números',q:'16 em alemão = ?',a:'sechzehn',t:'text'},
+{c:'Números',q:'30 em alemão = ?',a:'dreißig',alts:['dreissig'],t:'text'},
+{c:'Apresentação oral',q:'Woher kommen Sie?',a:'Ich komme aus Brasilien.',alts:['Ich komme aus Brasilien'],t:'text'},
+{c:'Apresentação oral',q:'Wo wohnen Sie?',a:'Ich wohne in São Paulo.',alts:['Ich wohne in Sao Paulo','Ich wohne in São Paulo'],t:'text'},
+{c:'Apresentação oral',q:'Was sind Sie von Beruf?',a:'Ich bin Unternehmer.',alts:['Ich bin Unternehmer'],t:'text'},
+{c:'Apresentação oral',q:'Was machen Sie beruflich?',a:'Ich arbeite im Bereich Umwelttechnik.',alts:['Ich arbeite im Bereich Umwelttechnik'],t:'text'},
+{c:'Apresentação oral',q:'Welche Sprachen sprechen Sie?',a:'Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch.',alts:['Ich spreche Portugiesisch Englisch und ein bisschen Deutsch'],t:'text'}
+];
+let quizCat='Misto — estilo prova',quizPool=[],quizIndex=0,quizCurrent=null,quizSelected=null,qDone=0,qRight=0,qWrong=0,qErrors=[];
+const cats=['Misto — estilo prova','Apresentação oral','W-Fragen','Conjugação','sein / haben / heißen','nicht / kein / doch','Akkusativ básico','Família','Artigos + objetos','Móveis + preços','Estado civil','Números'];
+function norm(s){return (s||'').toLowerCase().trim().replace(/[.!?,;:]/g,'').replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ')}
+function shuffled(a){return [...a].sort(()=>Math.random()-.5)}
+function buildMenu(){const m=document.getElementById('quizMenu');m.innerHTML='';cats.forEach(c=>{let b=document.createElement('button');b.textContent=c;b.className=c===quizCat?'active':'';b.onclick=()=>startQuiz(c);m.appendChild(b)})}
+function startQuiz(c){quizCat=c;quizPool=c==='Misto — estilo prova'?shuffled(quizBank):shuffled(quizBank.filter(x=>x.c===c));quizIndex=0;buildMenu();renderQuiz()}
+function renderQuiz(){if(!quizPool.length){document.getElementById('quizQuestion').textContent='Sem questões neste tema.';return}quizCurrent=quizPool[quizIndex%quizPool.length];quizSelected=null;document.getElementById('quizCat').textContent=quizCat;document.getElementById('quizCount').textContent=(quizIndex%quizPool.length+1)+' / '+quizPool.length;document.getElementById('quizQuestion').textContent=quizCurrent.q;const a=document.getElementById('quizAnswer');const f=document.getElementById('quizFeedback');f.className='quiz-feedback';f.textContent='';if(quizCurrent.t==='mc'){a.innerHTML='<div class="quiz-options">'+quizCurrent.o.map(x=>`<button class="quiz-option" onclick="selectOption(this,${JSON.stringify(x).replace(/"/g,'&quot;')})">${x}</button>`).join('')+'</div>';document.getElementById('checkBtn').style.display='inline-block'}else{a.innerHTML='<input id="quizInput" class="quiz-input" autocomplete="off" placeholder="Digite sua resposta em alemão" onkeydown="if(event.key===\'Enter\')checkQuiz()">';document.getElementById('checkBtn').style.display='inline-block';setTimeout(()=>document.getElementById('quizInput')?.focus(),50)}}
+function selectOption(el,val){quizSelected=val;document.querySelectorAll('.quiz-option').forEach(b=>b.classList.remove('wrong','correct'));el.style.outline='2px solid #6d93bf'}
+function isCorrect(v){let ok=[quizCurrent.a,...(quizCurrent.alts||[])];return ok.some(x=>norm(x)===norm(v))}
+function checkQuiz(){if(!quizCurrent)return;let v=quizCurrent.t==='mc'?quizSelected:(document.getElementById('quizInput')?.value||'');if(!v){const f=document.getElementById('quizFeedback');f.className='quiz-feedback bad';f.textContent='Responda primeiro.';return}let ok=isCorrect(v);qDone++;if(ok)qRight++;else{qWrong++;qErrors.push(quizCurrent)};document.getElementById('qDone').textContent=qDone;document.getElementById('qRight').textContent=qRight;document.getElementById('qWrong').textContent=qWrong;document.getElementById('qPct').textContent=Math.round(qRight/qDone*100)+'%';if(quizCurrent.t==='mc')document.querySelectorAll('.quiz-option').forEach(b=>{b.style.outline='';if(norm(b.textContent)===norm(quizCurrent.a))b.classList.add('correct');else if(norm(b.textContent)===norm(v)&&!ok)b.classList.add('wrong')});const f=document.getElementById('quizFeedback');f.className='quiz-feedback '+(ok?'ok':'bad');f.innerHTML=(ok?'✅ <b>Correto!</b>':'❌ <b>Não.</b> Correto: <b>'+quizCurrent.a+'</b>')+(quizCurrent.why?'<br>'+quizCurrent.why:'');document.getElementById('checkBtn').style.display='none'}
+function nextQuiz(){if(!quizPool.length)startQuiz(quizCat);else{quizIndex=(quizIndex+1)%quizPool.length;renderQuiz()}}
+function retryErrors(){if(!qErrors.length){const f=document.getElementById('quizFeedback');f.className='quiz-feedback ok';f.textContent='Nenhum erro registrado ainda.';return}quizCat='Refazer erros';quizPool=shuffled(qErrors);quizIndex=0;buildMenu();renderQuiz()}
+function resetQuiz(){qDone=qRight=qWrong=0;qErrors=[];['qDone','qRight','qWrong'].forEach(id=>document.getElementById(id).textContent='0');document.getElementById('qPct').textContent='0%';startQuiz('Misto — estilo prova')}
+function speakQuiz(){if(quizCurrent)speak(quizCurrent.q)}
+buildMenu();startQuiz('Misto — estilo prova');
+</script>
+</body></html>
